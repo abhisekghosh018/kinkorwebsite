@@ -126,3 +126,13 @@ footer.site-footer {
     padding: 14px;
   }
 }
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.blink-text {
+  animation: blink 1s step-start infinite;
+}
