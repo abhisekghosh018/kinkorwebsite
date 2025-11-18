@@ -108,6 +108,18 @@
               P.S. Sonarpur, Kolkata 700150</div>
             <div class="fw-semibold mb-2"><i class="bi bi-envelope brand-color"></i> kinkorchanachur@gmail.com</div>
             <div class="fw-semibold mb-2"><i class="bi bi-whatsapp brand-color"></i> 9836406566</div>
+
+
+            <div class="col-md-12">
+              <input id="waMsg" class="form-control form-control-dark" placeholder="Type message..." required>
+            </div>
+            <div class="col-12">
+              <!-- <button id="submitBtn" class="btn cta-primary">Send message</button> -->
+              <button id="sendWa" class="btn cta-primary mt-2" type="submit">
+                <span id="btnText">Send via WhatsApp</span>
+              </button>
+            </div>
+
           </div>
         </aside>
       </div>
@@ -200,7 +212,13 @@
       }
     });
   </script>
-
+  <script>
+    const phone = "9804041345";
+    document.getElementById('sendWa').onclick = () => {
+      const txt = encodeURIComponent(document.getElementById('waMsg').value || 'Hi');
+      window.open(`https://wa.me/${phone}?text=${txt}`, '_blank', 'noopener');
+    };
+  </script>
 </body>
 
 </html>
